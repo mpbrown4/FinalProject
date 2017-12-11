@@ -4,18 +4,30 @@ public class List // class FirstLastList
 	private Link first; 
 	private Link last;
 
-	public List() // constructor
+	/**
+	 * constructor
+	 */
+	public List() 
 	{
 		first = null; // no links on list yet
 		last = null;
 	}
 
-	public boolean isEmpty() // true if no links
+	/**
+	 * @return
+	 * true if no links
+	 */
+	public boolean isEmpty() 
 	{
 		return first == null;
 	}
 
-	public void insertFirst(int key, String song) // insert at front of list
+	/**
+	 * @param key
+	 * @param song
+	 * insert at front of list
+	 */
+	public void insertFirst(int key, String song) 
 	{
 		Link newLink = new Link(key, song); // make new link
 		if (isEmpty()) // if empty list,
@@ -24,7 +36,12 @@ public class List // class FirstLastList
 		first = newLink; // first --> newLink
 	}
 
-	public void insertLast(int key, String song) // insert at end of list
+	/**
+	 * @param key
+	 * @param song
+	 * insert at end of list
+	 */
+	public void insertLast(int key, String song) 
 	{
 		Link newLink = new Link(key, song); // make new link
 		if (isEmpty()) // if empty list,
@@ -34,7 +51,11 @@ public class List // class FirstLastList
 		last = newLink; // newLink <-- last
 	}
 
-	public String deleteFirst() // delete first link
+	/**
+	 * @return
+	 * Delete first link
+	 */
+	public String deleteFirst() 
 	{ // (assumes non-empty list)
 		String temp = first.dData;
 		if (first.next == null) // if only one item
@@ -44,6 +65,9 @@ public class List // class FirstLastList
 		return temp;
 	}
 
+	/**
+	 * Display list 
+	 */
 	public void displayList() {
 		System.out.print("List of songs (first-->last): \n");
 		Link current = first; // start at beginning
@@ -53,6 +77,21 @@ public class List // class FirstLastList
 			current = current.next; // move to next link
 		}
 		System.out.println("");
+	}
+
+	public String get(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}//////////////////////////////////////////////////////////////////////////////
+
+	public void sort() {
+		// TODO Auto-generated method stub
+		
+	}////////////////////////////////////////////////////////////////////////////////
+
+	public String size() {
+		// TODO Auto-generated method stub
+		return null;///////////////////////////////////////////////////////////////////
 	}
 
 } // end class FirstLastList
